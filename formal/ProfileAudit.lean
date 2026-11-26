@@ -1,0 +1,11 @@
+import LongCycleBounds.CycleProfileCounterexample
+
+#print axioms LongCycleBounds.CycleProfile.Counterexample.laguerre_nonneg_of_splits
+#print axioms LongCycleBounds.CycleProfile.Counterexample.coefficients_correct
+#print axioms LongCycleBounds.CycleProfile.Counterexample.rational_gap_exact
+#print axioms LongCycleBounds.CycleProfile.Counterexample.exact_gap
+#print axioms LongCycleBounds.CycleProfile.Counterexample.negative_gap
+#print axioms LongCycleBounds.CycleProfile.Counterexample.not_splits
+#print axioms LongCycleBounds.CycleProfile.Counterexample.quotient_not_splits
+#print axioms LongCycleBounds.CycleProfile.Counterexample.not_weak_interlacing
+#print axioms LongCycleBounds.CycleProfile.Counterexample.not_strict_interlacing

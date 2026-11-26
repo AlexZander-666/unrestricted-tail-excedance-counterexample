@@ -1,0 +1,88 @@
+\documentclass[11pt]{article}
+\pdftrailerid{}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,hyperref}
+\newtheorem{theorem}{Theorem}
+\title{A nonreal excedance polynomial with an unrestricted tail of cycle lengths}
+\author{Bowen Zuo\\{\small East China University of Science and Technology}}
+\hypersetup{pdfauthor={Bowen Zuo},pdftitle={A nonreal excedance polynomial with an unrestricted tail of cycle lengths}}
+\date{26 November 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+A binary choice of admissible short cycles gives a strict-excedance polynomial on forty letters with a nonreal zero, although every cycle length at least 39 is admissible. A rational evaluation violates the first Laguerre inequality. This precludes all-size adjacent interlacing for independently weighted short cycles. The original minimum-length problem and eventual interlacing for fixed cutoff have different quantifiers.
+\end{abstract}
+
+For a set \(S\) of admissible lengths, put
+\(F_{n,S}(t)=\sum_\sigma t^{|\{i:\sigma(i)>i\}|}\), over permutations all of whose cycles have length in \(S\). Alexandersson's minimum-length question uses \(S=\{k,k+1,\ldots\}\) \cite{alex}. In the independent-weight extension one may choose \(w_j\in[0,1]\) for \(2\le j<k\), with \(w_1=0\) and \(w_j=1\) for \(j\ge k\). Each permutation carries the product of its cycle weights. With \(w_j\) the indicator of \(S\), this gives \(F_{n,S}\). Brenti proved the cycle-type product formula and real-rootedness for each individual conjugacy class \cite[Theorems 3.1--3.2]{brenti}. An earlier example allowing only lengths 3 and 4 at \(n=12\) gives a nonreal row \cite{older}. Adding the full 12-cycle to that example restores ten simple negative zeros after division by \(t\), as the accompanying certificate verifies; length 11 contributes nothing when fixed points are forbidden.
+
+\begin{theorem}
+Put \(k=39\) and \(S=\{2,3,5,6,8,9,12,15,18,21,24,27\}\cup\{39,40,\ldots\}\).
+Then \(F_{40,S}\) has a nonreal zero. Thus the rows at sizes 39 and 40 cannot interlace with all roots real. The quotients by \(t\) cannot strictly interlace at negative real roots.
+\end{theorem}
+\begin{proof}
+For a real polynomial define \(\Delta_f=f'^2-ff''\).
+If \(f\) splits into real linear factors then, away from the roots,
+\(\Delta_f(x)=f(x)^2\sum_j(x-r_j)^{-2}\) with multiplicity.
+Continuity gives nonnegativity everywhere. We show that
+\(\Delta_{F_{40,S}}(-2/15)<0\).
+
+Write \(A_m(t)=\sum_{\pi\in\mathfrak S_m}t^{\mathrm{des}(\pi)}\).
+A cycle on \(j\ge2\) fixed labels has excedance enumerator \(tA_{j-1}\).
+Indeed, start its cycle word with its greatest label. The internal ascents and last step back to the greatest label give exactly the excedances. Reversal interchanges the ordinary ascent and descent distributions. Group permutations by the cycle containing label one. This gives \(F_{0,S}=1\) and
+\[
+ F_{m,S}=\sum_{\substack{j\in S\\2\le j\le m}}
+ \binom{m-1}{j-1}\,t A_{j-1}(t)F_{m-j,S}(t).
+\]
+The recurrence \(A_{m+1}=(1+mt)A_m+t(1-t)A_m'\), with \(A_0=1\), supplies the inputs. Here is a complete rational check.
+\begin{verbatim}
+from fractions import Fraction as Q
+from math import comb
+x = Q(-2,15)
+S = {2,3,5,6,8,9,12,15,18,21,24,27,39,40}
+A = [[1]]
+for m in range(39):
+    row = [0]*(m+1)
+    for i,c in enumerate(A[-1]):
+        row[i] += (i+1)*c
+        if i+1 <= m: row[i+1] += (m-i)*c
+    A.append(row)
+F = [[1]]
+for m in range(1,41):
+    row = [0]*(m+1)
+    for j in sorted(S):
+        if j > m: break
+        for i,c in enumerate(A[j-1]):
+            for h,b in enumerate(F[m-j]):
+                row[1+i+h] += comb(m-1,j-1)*c*b
+    F.append(row)
+def der(p): return [i*c for i,c in enumerate(p)][1:]
+def val(p): return sum(c*x**i for i,c in enumerate(p))
+p = F[40]
+gap = val(der(p))**2 - val(p)*val(der(der(p)))
+assert gap < 0
+\end{verbatim}
+The Lean theorem \texttt{negative\_gap} proves this inequality for the actual weighted permutation polynomial using
+integer coefficients and exact rational Horner evaluation with
+derivatives. This contradicts the necessary condition for splitting.
+\end{proof}
+
+Independent rational Sturm calculations give 37 distinct negative
+roots for \(F_{39,S}/t\) and 34 real roots for the degree-38
+polynomial \(F_{40,S}/t\). Additional rational isolating disks
+certify its four nonreal roots. The Lean non-splitting theorem uses
+only the signed Laguerre gap. The profile in this theorem includes
+every length at least 39, including the full 40-cycle.
+
+\paragraph{Acknowledgment.}
+ChatGPT assisted in finding the profile, deriving and checking the
+certificates and preparing the formalization and manuscript.
+\paragraph{Data and software.} The accompanying archive includes the Lean project, pinned dependencies, exact certificates and reproduction scripts.\par
+\begin{thebibliography}{9}
+\bibitem{alex} P. Alexandersson, Real-rootedness and open problems, section on permutations with long cycles,
+\href{https://www.symmetricfunctions.com/realRootedOpenProblems.htm\#permutations-with-long-cycles}{SymCat}.
+\bibitem{brenti} F. Brenti, Permutation enumeration, symmetric functions, and unimodality, \emph{Pacific J. Math.} \textbf{157} (1993), 1--28. \href{https://doi.org/10.2140/pjm.1993.157.1}{doi:10.2140/pjm.1993.157.1}.
+\bibitem{older} \emph{Alexandersson long-cycle research}, section on P\'olya-frequency length weights.
+\href{https://github.com/1337isnot1337/solved-conjectures/blob/0c07434ef991b853528ca55926b3b83820b7f58d/docs/alexandersson-long-cycle-research.md}{Fixed source revision}.
+\end{thebibliography}
+\end{document}

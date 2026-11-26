@@ -1,0 +1,25 @@
+{
+  "title": "A nonreal excedance polynomial with an unrestricted tail of cycle lengths",
+  "creators": [
+    {
+      "name": "Zuo, Bowen",
+      "affiliation": "East China University of Science and Technology"
+    }
+  ],
+  "description": "The size-40 strict-excedance polynomial can have nonreal zeros even when all cycle lengths from 39 onward are allowed. Original software is available under Apache-2.0. The paper carries a separate copyright notice.",
+  "version": "1.0.0",
+  "upload_type": "software",
+  "license": "Apache-2.0",
+  "keywords": [
+    "algebraic combinatorics",
+    "Lean 4",
+    "excedance polynomials"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/AlexZander-666/unrestricted-tail-excedance-counterexample",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    }
+  ]
+}

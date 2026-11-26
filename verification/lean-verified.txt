@@ -1,0 +1,93 @@
+Source-cold DGX Spark build, 26 November 2026
+PASS: 82 project modules replayed; 9 declarations audited.
+LongCycleBounds.CycleProfile.Counterexample.laguerre_nonneg_of_splits : propext, Classical.choice, Quot.sound
+LongCycleBounds.CycleProfile.Counterexample.coefficients_correct : propext, Classical.choice, Quot.sound
+LongCycleBounds.CycleProfile.Counterexample.rational_gap_exact : propext, Classical.choice, Quot.sound
+LongCycleBounds.CycleProfile.Counterexample.exact_gap : propext, Classical.choice, Quot.sound
+LongCycleBounds.CycleProfile.Counterexample.negative_gap : propext, Classical.choice, Quot.sound
+LongCycleBounds.CycleProfile.Counterexample.not_splits : propext, Classical.choice, Quot.sound
+LongCycleBounds.CycleProfile.Counterexample.quotient_not_splits : propext, Classical.choice, Quot.sound
+LongCycleBounds.CycleProfile.Counterexample.not_weak_interlacing : propext, Classical.choice, Quot.sound
+LongCycleBounds.CycleProfile.Counterexample.not_strict_interlacing : propext, Classical.choice, Quot.sound
+kernel_replay_exit=0 Cluster.EulerianInsertion
+kernel_replay_exit=0 LongCycleBounds
+kernel_replay_exit=0 LongCycleBounds.AdjacentRootStep
+kernel_replay_exit=0 LongCycleBounds.AnchoredRows
+kernel_replay_exit=0 LongCycleBounds.BandBinomial
+kernel_replay_exit=0 LongCycleBounds.BandCycles
+kernel_replay_exit=0 LongCycleBounds.BandEndpoint
+kernel_replay_exit=0 LongCycleBounds.BandFormula
+kernel_replay_exit=0 LongCycleBounds.BandMoments
+kernel_replay_exit=0 LongCycleBounds.BandOuterMoments
+kernel_replay_exit=0 LongCycleBounds.BandRows
+kernel_replay_exit=0 LongCycleBounds.BandShape
+kernel_replay_exit=0 LongCycleBounds.BandSturm
+kernel_replay_exit=0 LongCycleBounds.BulkComplex
+kernel_replay_exit=0 LongCycleBounds.CycleProfile
+kernel_replay_exit=0 LongCycleBounds.CycleProfileCounterexample
+kernel_replay_exit=0 LongCycleBounds.CycleProfileHomotopy
+kernel_replay_exit=0 LongCycleBounds.CycleProfileIndependentWeights
+kernel_replay_exit=0 LongCycleBounds.CycleProfileNormalization
+kernel_replay_exit=0 LongCycleBounds.CycleProfileReadout
+kernel_replay_exit=0 LongCycleBounds.DerangementAnchor
+kernel_replay_exit=0 LongCycleBounds.DescentRows
+kernel_replay_exit=0 LongCycleBounds.EulerianBulk
+kernel_replay_exit=0 LongCycleBounds.EulerianSeries
+kernel_replay_exit=0 LongCycleBounds.EulerianSturm
+kernel_replay_exit=0 LongCycleBounds.GeneralCycleQuotient
+kernel_replay_exit=0 LongCycleBounds.GeneralCycleSupports
+kernel_replay_exit=0 LongCycleBounds.InitialRows
+kernel_replay_exit=0 LongCycleBounds.InsertionBoundary
+kernel_replay_exit=0 LongCycleBounds.LinearOuterBridge
+kernel_replay_exit=0 LongCycleBounds.LinearRootCoordinates
+kernel_replay_exit=0 LongCycleBounds.LinearRowInduction
+kernel_replay_exit=0 LongCycleBounds.LinearTransfer
+kernel_replay_exit=0 LongCycleBounds.MarkedExponentialBias
+kernel_replay_exit=0 LongCycleBounds.MarkedInsertion
+kernel_replay_exit=0 LongCycleBounds.MarkedLabelBias
+kernel_replay_exit=0 LongCycleBounds.MarkedLogistic
+kernel_replay_exit=0 LongCycleBounds.MarkedQuotientHomotopy
+kernel_replay_exit=0 LongCycleBounds.MarkedTwoCycles
+kernel_replay_exit=0 LongCycleBounds.MarkedTwoEGF
+kernel_replay_exit=0 LongCycleBounds.OriginalRoots
+kernel_replay_exit=0 LongCycleBounds.Outer
+kernel_replay_exit=0 LongCycleBounds.OuterAlternation
+kernel_replay_exit=0 LongCycleBounds.OuterDecay
+kernel_replay_exit=0 LongCycleBounds.OuterLow
+kernel_replay_exit=0 LongCycleBounds.OuterMode
+kernel_replay_exit=0 LongCycleBounds.OuterMoments
+kernel_replay_exit=0 LongCycleBounds.PartialFractions
+kernel_replay_exit=0 LongCycleBounds.PoleBridge
+kernel_replay_exit=0 LongCycleBounds.PoleTails
+kernel_replay_exit=0 LongCycleBounds.RankedSupport
+kernel_replay_exit=0 LongCycleBounds.Reciprocity
+kernel_replay_exit=0 LongCycleBounds.RootBound
+kernel_replay_exit=0 LongCycleBounds.RootHomotopy
+kernel_replay_exit=0 LongCycleBounds.Sturm
+kernel_replay_exit=0 LongCycleBounds.ThreeCycleLengths
+kernel_replay_exit=0 LongCycleBounds.ThreeCycleQuotient
+kernel_replay_exit=0 LongCycleBounds.ThreeCycleRows
+kernel_replay_exit=0 LongCycleBounds.TripleCycleWeight
+kernel_replay_exit=0 LongCycleBounds.TripleThresholdRow
+kernel_replay_exit=0 LongCycleBounds.UniversalInsertion
+kernel_replay_exit=0 LongCycleBounds.UniversalRecurrence
+kernel_replay_exit=0 LongCycleBounds.UniversalShortBranch
+kernel_replay_exit=0 LongCycleFinite.Arithmetic
+kernel_replay_exit=0 LongCycleFinite.Assembly
+kernel_replay_exit=0 LongCycleFinite.Checks
+kernel_replay_exit=0 LongCycleFinite.CoefficientRows
+kernel_replay_exit=0 LongCycleFinite.Gamma
+kernel_replay_exit=0 LongCycleFinite.Interlacing
+kernel_replay_exit=0 LongCycleFinite.LiftRoots
+kernel_replay_exit=0 LongCycleFinite.Rounded
+kernel_replay_exit=0 LongCycles.AnchoredCycles
+kernel_replay_exit=0 LongCycles.CycleSizes
+kernel_replay_exit=0 LongCycles.FirstSplit
+kernel_replay_exit=0 LongCycles.FirstSplitRows
+kernel_replay_exit=0 LongCycles.PermCycleBridge
+kernel_replay_exit=0 LongCycles.SingleCycleWeight
+kernel_replay_exit=0 LongCycles.Statement
+kernel_replay_exit=0 LongCycles.SupportWords
+kernel_replay_exit=0 LongCycles.TwoCycleWeight
+kernel_replay_exit=0 LongCycles.WordWeight
+kernel_replay_exit=0 Statement

@@ -1,0 +1,3 @@
+PASS: all ten roots of the degree-ten quotient are simple and negative.
+Quotient coefficients, ascending: 1 2036 158412 2288188 10094239 16324848 10094239 2288188 158412 2036 1
+Rational sign-change nodes: -2000 -100 -20 -5 -3 -1 -1/3 -1/5 -1/20 -1/100 0

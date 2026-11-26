@@ -1,0 +1,38 @@
+name: Reproduce
+on: [push, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  certificates:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: false
+      - run: |
+          sha256sum -c SHA256SUMS
+          python3 -B verification/certificate.py
+          python3 -B verification/compare_twelve.py
+  lean:
+    needs: certificates
+    runs-on: ubuntu-24.04
+    timeout-minutes: 350
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: false
+      - uses: leanprover/lean-action@fe408643ea7367d8c0404a8be3975bb145f5fb64
+        with:
+          auto-config: false
+          lake-package-directory: formal
+          build: false
+          test: false
+          lint: false
+          use-mathlib-cache: false
+      - name: Rebuild project sources and replay the Lean declarations
+        working-directory: formal
+        env:
+          LEAN_NUM_THREADS: '1'
+        run: |
+          elan toolchain install "$(cat lean-toolchain)"
+          python3 -Bu verify_lean.py . ProfileAudit --jobs 2

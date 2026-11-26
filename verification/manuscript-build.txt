@@ -1,0 +1,6 @@
+Two independent builds gave byte-identical PDFs.
+Title:           A nonreal excedance polynomial with an unrestricted tail of cycle lengths
+Author:          Bowen Zuo
+Pages:           3
+6e8dca153a81a4efd2791b4ffc556021312f8034569d45d0b69f72eef27aadfd  paper/main.pdf
+56d1ff757f99ffc9e2a08f8e952c7ab5ae445efab5d484038c886ec474aa5dd1  paper/main.tex

@@ -1,0 +1,1 @@
+Copyright 2026 Bowen Zuo. The author authorizes distribution of this edition in the accompanying repository and research archive. The software license in the repository applies to the original Lean code and reproduction scripts. All other rights in the paper are reserved.

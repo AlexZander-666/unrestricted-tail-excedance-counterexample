@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "Please cite this paper and the accompanying formal proofs."
+title: "A nonreal excedance polynomial with an unrestricted tail of cycle lengths"
+type: software
+authors:
+  - family-names: Zuo
+    given-names: Bowen
+    affiliation: East China University of Science and Technology
+version: "1.0.0"
+date-released: 2026-11-26
+license: Apache-2.0
+repository-code: https://github.com/AlexZander-666/unrestricted-tail-excedance-counterexample
