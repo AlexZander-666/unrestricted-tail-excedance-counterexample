@@ -16,3 +16,7 @@ python3 -Bu formal/verify_lean.py formal ProfileAudit --jobs 2
 ```
 
 Bowen Zuo, East China University of Science and Technology. Version 1.0.0, 26 November 2026. ChatGPT assisted with mathematical derivation, independent checks, formalization and drafting. The software uses Apache-2.0 and the manuscript carries a separate copyright notice.
+
+## Later version
+
+This example is included, as Theorem 2.2, in the consolidated manuscript of the project [excedance-cycle-profile-mixtures](https://github.com/AlexZander-666/excedance-cycle-profile-mixtures), which supersedes it. The tagged release v1.0.0 lists Bowen Zuo as sole author and remains unchanged. The consolidated manuscript prepared for journal submission is joint work of Bowen Zuo and Xiaojuan Luo (corresponding author), both of East China University of Science and Technology.
