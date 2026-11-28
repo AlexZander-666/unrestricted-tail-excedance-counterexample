@@ -19,4 +19,4 @@ Bowen Zuo, East China University of Science and Technology. Version 1.0.0, 26 No
 
 ## Later version
 
-This example is included, as Theorem 2.2, in the consolidated manuscript of the project [excedance-cycle-profile-mixtures](https://github.com/AlexZander-666/excedance-cycle-profile-mixtures), which supersedes it. The tagged release v1.0.0 lists Bowen Zuo as sole author and remains unchanged. The consolidated manuscript prepared for journal submission is joint work of Bowen Zuo and Xiaojuan Luo (corresponding author), both of East China University of Science and Technology.
+This example is included, as Theorem 2.2, in the consolidated manuscript of the project [excedance-cycle-profile-mixtures](https://github.com/AlexZander-666/excedance-cycle-profile-mixtures), which supersedes it. The tagged release v1.0.0 lists Bowen Zuo as sole author and remains unchanged. The consolidated manuscript prepared for journal submission lists Bowen Zuo and Xiaojuan Luo as authors and identifies Xiaojuan Luo as the corresponding author. Both authors are affiliated with East China University of Science and Technology.
